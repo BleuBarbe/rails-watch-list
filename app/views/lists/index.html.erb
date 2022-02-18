@@ -1,0 +1,6 @@
+ <h2>Index</h2>
+<ol>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name.capitalize, list_path(list) %></li>
+  <% end %>
+</ol>
