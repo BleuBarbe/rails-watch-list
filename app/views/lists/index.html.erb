@@ -1,6 +1,26 @@
- <h2>Index</h2>
-<ol>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name.capitalize, list_path(list) %></li>
-  <% end %>
-</ol>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://api.caviar.tv/wp-content/uploads/2020/11/david_hasselhoff-true_survivor-david_sandberg.jpg)">
+  <h1>Home</h1>
+  <%= link_to "Write a story", "#", class: "btn btn-ghost" %>
+
+
+  <div class="container_search">
+    <input type="text" placeholder="Search...">
+    <div class="search"></div>
+  </div>
+
+</div>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <% @lists.each do |list| %>
+    <div class="col-4 mt-5">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to list.name.capitalize, list_path(list) %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
